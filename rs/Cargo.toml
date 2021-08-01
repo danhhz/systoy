@@ -1,7 +1,16 @@
 [package]
 name = "systoy"
-version = "0.1.0"
+version = "0.0.0"
 authors = ["Daniel Harrison <52528+danhhz@users.noreply.github.com>"]
 edition = "2018"
 
-[dependencies]
+[dev-dependencies]
+criterion = { version = "0.3", features = ["html_reports"] }
+tempfile = "3.2"
+
+[lib]
+bench = false
+
+[[bench]]
+name = "file"
+harness = false
